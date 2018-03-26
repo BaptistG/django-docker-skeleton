@@ -10,12 +10,12 @@ services:
       - POSTGRES_USER=app_user
       - POSTGRES_PASSWORD=apppass
       - POSTGRES_DB=app
-    command: python run.py
+    command: python manage.py runserver 0.0.0.0:8000
     working_dir: /app
     volumes:
       - .:/app
     ports:
-      - "8000:5000"
+      - "8000:8000"
     depends_on:
       - postgresql
     extra_hosts:

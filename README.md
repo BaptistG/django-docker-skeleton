@@ -29,7 +29,7 @@ On Ubuntu/Debian:
 
 1. Copy this project's code in another directory:
    `cp -R ./django-docker-skeleton/* ./new_github_project`
-2. Run `./create_app.sh yourapplication` (Pick the name wisely)
+2. Run `./create_app.sh project_name app_nmae` (Pick the names wisely)
 3. Run `docker-compose up` to start your containers
 4. Go to http://localhost:8000
 5. You're all set! Your app is running Python 3.6 on Alpine Linux and all
@@ -37,11 +37,14 @@ your pip packages are installed inside your virtual environment.
 
 ## New project's structure
 
+For bigger project, this should be updated to:
+https://docs.djangoproject.com/en/2.0/intro/reusable-apps/
+
 ```
 manage.py
 virtualenv/
-yourapplication/
-    main/
+project_name/
+    app_name/
         __init__.py
         admin.py
         apps.py
